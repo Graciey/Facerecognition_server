@@ -10,9 +10,9 @@ const imageApi = require('./controllers/image');
 const db =  knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : ' postgresql-parallel-12575',
       user : 'postgres',
-      password : 'iluvmylyf',
+      password : '',
       database : 'smart_brain'
     }
   });
