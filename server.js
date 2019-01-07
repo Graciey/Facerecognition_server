@@ -10,10 +10,8 @@ const imageApi = require('./controllers/image');
 const db =  knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-objective-57535',
-      user : 'postgres',
-      password : '',
-      database : 'smart_brain'
+      host : process.env.DATABASE_URL,
+     ssl: true
     }
   });
   db.select('*').from('users').then(data => {
